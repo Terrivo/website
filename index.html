@@ -19,13 +19,14 @@
     background: var(--cream);
     color: var(--ink);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.55;
+    line-height: 1.6;
   }
+  a { color: var(--green-dark); }
   header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 960px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 28px 24px 0;
   }
@@ -43,13 +44,14 @@
     text-decoration: none;
     font-size: 0.95rem;
     margin-left: 24px;
+    font-weight: 600;
   }
-  main {
-    max-width: 720px;
+  section {
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 80px 24px 40px;
-    text-align: center;
+    padding: 56px 24px;
   }
+  .hero { text-align: center; padding-top: 80px; }
   h1 {
     font-size: clamp(2rem, 5vw, 3rem);
     line-height: 1.15;
@@ -57,15 +59,20 @@
     margin: 0 0 16px;
     text-wrap: balance;
   }
+  h2 {
+    font-size: 1.7rem;
+    color: var(--green-dark);
+    margin: 0 0 24px;
+    text-align: center;
+  }
   .tagline {
     font-size: 1.2rem;
-    color: var(--ink);
     opacity: 0.85;
     margin: 0 0 32px;
   }
   .pitch {
     font-size: 1.05rem;
-    max-width: 560px;
+    max-width: 620px;
     margin: 0 auto 40px;
   }
   .badge {
@@ -78,9 +85,54 @@
     font-size: 0.95rem;
     letter-spacing: 0.02em;
   }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+  }
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .card .step {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--green);
+    color: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+  }
+  .card h3 { margin: 0 0 8px; font-size: 1.05rem; color: var(--green-dark); }
+  .card p { margin: 0; font-size: 0.95rem; opacity: 0.85; }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+  @media (max-width: 700px) {
+    .two-col { grid-template-columns: 1fr; }
+  }
+  .two-col h3 {
+    color: var(--green-dark);
+    font-size: 1.2rem;
+    margin: 0 0 12px;
+  }
+  .contact-box {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+  }
   footer {
-    max-width: 960px;
-    margin: 60px auto 0;
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 24px;
     border-top: 1px solid rgba(0,0,0,0.08);
     display: flex;
@@ -91,7 +143,7 @@
     font-size: 0.9rem;
     color: rgba(0,0,0,0.6);
   }
-  footer a { color: var(--green-dark); text-decoration: none; }
+  footer a { text-decoration: none; }
   .footer-links a { margin-right: 18px; }
 </style>
 </head>
@@ -102,26 +154,105 @@
       Terrivo
     </div>
     <nav>
+      <a href="#comment-ca-marche">Comment ça marche</a>
       <a href="mailto:contact@terrivolocal.com">Contact</a>
     </nav>
   </header>
 
-  <main>
+  <section class="hero">
     <h1>Le marché des producteurs locaux</h1>
     <p class="tagline">Fruits, légumes, œufs, fromages... achetés directement aux producteurs près de chez vous.</p>
     <p class="pitch">
       Terrivo met en relation directe les producteurs locaux et les consommateurs,
       sans intermédiaire. Vous achetez au prix juste, le producteur vend
       directement — sans commission de grande surface, sans grossiste entre vous
-      et lui. Lancement prévu en Belgique.
+      et lui.
     </p>
-    <span class="badge">Bientôt disponible</span>
-  </main>
+    <span class="badge">Lancement en Belgique — Bientôt disponible</span>
+  </section>
+
+  <section id="pourquoi">
+    <h2>Pourquoi Terrivo existe</h2>
+    <div class="two-col">
+      <div>
+        <h3>Le constat</h3>
+        <p>
+          Entre le champ et l'assiette, un produit local passe souvent par
+          plusieurs intermédiaires. Le producteur touche une part minime du
+          prix payé par le consommateur, et ce dernier ne sait plus toujours
+          d'où vient ce qu'il mange ni dans quelles conditions c'est produit.
+        </p>
+      </div>
+      <div>
+        <h3>Notre approche</h3>
+        <p>
+          Terrivo supprime les intermédiaires : le producteur fixe son prix,
+          publie ce qu'il a de disponible, et vend directement à des
+          consommateurs de sa région. L'acheteur récupère sa commande
+          directement auprès du producteur — fraîcheur maximale, traçabilité
+          totale, prix juste pour les deux parties.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="comment-ca-marche">
+    <h2>Comment ça marche</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="step">1</span>
+        <h3>Trouvez un producteur</h3>
+        <p>Parcourez la carte des producteurs actifs près de chez vous et découvrez leurs produits du moment.</p>
+      </div>
+      <div class="card">
+        <span class="step">2</span>
+        <h3>Commandez en ligne</h3>
+        <p>Choisissez vos produits et payez en toute sécurité directement dans l'application.</p>
+      </div>
+      <div class="card">
+        <span class="step">3</span>
+        <h3>Récupérez votre commande</h3>
+        <p>Retirez votre commande directement chez le producteur, à l'heure convenue avec lui via la messagerie intégrée.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="producteurs">
+    <h2>Vous êtes producteur ?</h2>
+    <div class="two-col">
+      <div>
+        <h3>Vendez directement</h3>
+        <p>
+          Créez votre vitrine en quelques minutes, publiez vos produits
+          disponibles et vendez directement à des consommateurs de votre
+          région — sans commission de grande surface, sans grossiste entre
+          vous et vos clients.
+        </p>
+      </div>
+      <div>
+        <h3>Restez maître de votre activité</h3>
+        <p>
+          Vous fixez vos prix, gérez vos stocks et vos disponibilités, et
+          échangez directement avec vos acheteurs. Terrivo s'occupe de la
+          mise en relation et du paiement sécurisé, vous vous occupez de ce
+          que vous savez faire de mieux : produire.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-box">
+      <h2>Une question ?</h2>
+      <p>Producteur, futur utilisateur, presse ou partenaire — écrivez-nous, on vous répond directement.</p>
+      <p><a href="mailto:contact@terrivolocal.com">contact@terrivolocal.com</a></p>
+    </div>
+  </section>
 
   <footer>
-    <div>&copy; 2026 Terrivo Group SRL</div>
+    <div>&copy; 2026 Terrivo Group SRL — Avenue Globe 45, boîte 44, 1190 Forest, Belgique</div>
     <div class="footer-links">
-      <a href="mailto:contact@terrivolocal.com">contact@terrivolocal.com</a>
+      <a href="mailto:contact@terrivolocal.com">Contact</a>
     </div>
   </footer>
 </body>
