@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — Terrivo</title>
+<meta name="description" content="Réponses aux questions les plus fréquentes sur Terrivo : compte, commandes, paiement, producteurs.">
+<link rel="icon" href="/logo.png">
+<style>
+  :root {
+    --green: #3E5C34;
+    --green-dark: #2C4225;
+    --cream: #F5F5E9;
+    --ink: #22281f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: var(--green-dark); }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 28px 24px 0;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--green-dark);
+    text-decoration: none;
+  }
+  .brand img { width: 40px; height: 40px; border-radius: 10px; }
+  nav a {
+    color: var(--green-dark);
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-left: 24px;
+    font-weight: 600;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    color: var(--green-dark);
+    margin: 0 0 8px;
+    text-align: center;
+    text-wrap: balance;
+  }
+  .subtitle { text-align: center; opacity: 0.75; margin: 0 0 40px; }
+  h2 {
+    font-size: 1.05rem;
+    color: rgba(34,40,31,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 44px 0 16px;
+  }
+  h2:first-of-type { margin-top: 0; }
+  details {
+    background: white;
+    border-radius: 14px;
+    padding: 4px 20px;
+    margin: 0 0 10px;
+  }
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--green-dark);
+    padding: 16px 0;
+    list-style: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+";
+    float: right;
+    font-size: 1.3rem;
+    color: var(--green);
+  }
+  details[open] summary::after { content: "–"; }
+  details p { margin: 0 0 16px; opacity: 0.9; }
+  footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: rgba(0,0,0,0.6);
+  }
+  footer a { text-decoration: none; }
+  .footer-links a { margin-right: 18px; }
+</style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">
+      <img src="/logo.png" alt="Terrivo">
+      Terrivo
+    </a>
+    <nav>
+      <a href="/#comment-ca-marche">Comment ça marche</a>
+      <a href="/compte/">Mon compte</a>
+      <a href="mailto:contact@terrivolocal.com">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Questions fréquentes</h1>
+    <p class="subtitle">Tout ce qu'il faut savoir pour bien démarrer sur Terrivo.</p>
+
+    <h2>Mon compte</h2>
+
+    <details>
+      <summary>Comment créer un compte ?</summary>
+      <p>Téléchargez l'application Terrivo, choisissez « Acheteur » ou « Producteur », puis inscrivez-vous avec votre adresse email. Un compte acheteur vous permet de parcourir les fermes et de commander ; un compte producteur vous permet de créer votre vitrine et de vendre vos produits.</p>
+    </details>
+
+    <details>
+      <summary>Comment supprimer mon compte ?</summary>
+      <p>Rendez-vous sur <a href="/compte/">votre espace compte</a> sur ce site, connectez-vous avec les identifiants de votre compte Terrivo, puis cliquez sur « Supprimer mon compte ». La suppression est immédiate et définitive : votre profil, vos commandes, vos messages et (si vous êtes producteur) votre ferme et vos produits sont supprimés. Les données que nous devons légalement conserver (factures, données comptables) sont conservées 7 ans conformément à la loi belge.</p>
+    </details>
+
+    <details>
+      <summary>J'ai oublié mon mot de passe, que faire ?</summary>
+      <p>Depuis l'écran de connexion de l'application, appuyez sur « Mot de passe oublié ? » et suivez les instructions envoyées par email.</p>
+    </details>
+
+    <h2>Acheter sur Terrivo</h2>
+
+    <details>
+      <summary>Comment fonctionne l'application ?</summary>
+      <p>Vous parcourez la carte des producteurs actifs près de chez vous, consultez leurs produits disponibles, commandez et payez directement dans l'application. Vous récupérez ensuite votre commande chez le producteur, à l'heure convenue avec lui via la messagerie intégrée.</p>
+    </details>
+
+    <details>
+      <summary>Comment se passe le paiement ?</summary>
+      <p>Le paiement est traité de façon sécurisée par Stripe, directement dans l'application. Terrivo ne stocke jamais vos données de carte bancaire.</p>
+    </details>
+
+    <details>
+      <summary>Où et comment je récupère ma commande ?</summary>
+      <p>Terrivo est un marché de vente directe : il n'y a pas de livraison automatique. Vous convenez du lieu et de l'heure de retrait directement avec le producteur, via la messagerie intégrée à l'application.</p>
+    </details>
+
+    <details>
+      <summary>C'est quoi le FreshScore affiché sur les fiches producteurs ?</summary>
+      <p>Le FreshScore est une note de confiance calculée à partir des avis laissés par les acheteurs après une commande réelle. Plus un producteur a d'avis positifs, plus son score est élevé.</p>
+    </details>
+
+    <h2>Vendre sur Terrivo</h2>
+
+    <details>
+      <summary>Comment devenir producteur sur Terrivo ?</summary>
+      <p>Créez un compte producteur dans l'application, renseignez les informations de votre ferme, puis publiez vos produits disponibles. Selon votre statut (professionnel ou particulier), une vérification d'identité ou de TVA peut être demandée avant de pouvoir recevoir des paiements.</p>
+    </details>
+
+    <details>
+      <summary>Terrivo prend-elle une commission ?</summary>
+      <p>Une commission est prélevée sur chaque vente pour financer le fonctionnement de la plateforme — le détail est affiché avant chaque transaction. Il n'y a aucun frais d'inscription ni d'abonnement.</p>
+    </details>
+
+    <details>
+      <summary>Quand suis-je payé ?</summary>
+      <p>Les versements sont gérés par Stripe et transférés directement sur votre compte bancaire selon le calendrier standard de Stripe, une fois la commande confirmée.</p>
+    </details>
+
+    <h2>Besoin d'aide ?</h2>
+
+    <details>
+      <summary>Cette FAQ ne répond pas à ma question, comment vous contacter ?</summary>
+      <p>Écrivez-nous à <a href="mailto:contact@terrivolocal.com">contact@terrivolocal.com</a>, on vous répond directement.</p>
+    </details>
+  </main>
+
+  <footer>
+    <div>&copy; 2026 Terrivo Group SRL — Avenue Globe 45, boîte 44, 1190 Forest, Belgique</div>
+    <div class="footer-links">
+      <a href="/confidentialite/">Confidentialité</a>
+      <a href="mailto:contact@terrivolocal.com">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>

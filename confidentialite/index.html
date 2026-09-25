@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité — Terrivo</title>
+<meta name="description" content="Comment Terrivo collecte, utilise et protège vos données personnelles.">
+<link rel="icon" href="/logo.png">
+<style>
+  :root {
+    --green: #3E5C34;
+    --green-dark: #2C4225;
+    --cream: #F5F5E9;
+    --ink: #22281f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: var(--green-dark); }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 28px 24px 0;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--green-dark);
+    text-decoration: none;
+  }
+  .brand img { width: 40px; height: 40px; border-radius: 10px; }
+  nav a {
+    color: var(--green-dark);
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-left: 24px;
+    font-weight: 600;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    color: var(--green-dark);
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+  .updated { opacity: 0.65; font-size: 0.9rem; margin: 0 0 40px; }
+  h2 {
+    font-size: 1.25rem;
+    color: var(--green-dark);
+    margin: 40px 0 12px;
+  }
+  p { margin: 0 0 14px; }
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin: 0 0 16px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    font-size: 0.92rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    vertical-align: top;
+  }
+  th { background: var(--green); color: white; font-weight: 600; }
+  tr:last-child td { border-bottom: none; }
+  .table-wrap { overflow-x: auto; margin: 0 0 16px; border-radius: 16px; }
+  footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: rgba(0,0,0,0.6);
+  }
+  footer a { text-decoration: none; }
+  .footer-links a { margin-right: 18px; }
+</style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">
+      <img src="/logo.png" alt="Terrivo">
+      Terrivo
+    </a>
+    <nav>
+      <a href="/#comment-ca-marche">Comment ça marche</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/compte/">Mon compte</a>
+      <a href="mailto:contact@terrivolocal.com">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Politique de confidentialité</h1>
+    <p class="updated">Dernière mise à jour : 25 septembre 2026</p>
+
+    <h2>1. Qui sommes-nous</h2>
+    <p>
+      Terrivo (Terrivo Group SRL, dont le siège social est établi à Avenue
+      Globe 45, boîte 44, 1190 Forest, Belgique, immatriculée à la
+      Banque-Carrefour des Entreprises sous le numéro 1042.015.174) est
+      responsable du traitement de vos données personnelles collectées via
+      l'application mobile et le site Terrivo (ci-après « l'Application »).
+    </p>
+    <p>
+      <strong>Contact vie privée :</strong>
+      <a href="mailto:contact@terrivolocal.com">contact@terrivolocal.com</a>
+    </p>
+
+    <h2>2. Quelles données nous collectons</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Catégorie</th><th>Exemples</th><th>Finalité</th></tr>
+        <tr><td>Compte</td><td>Email, mot de passe (haché), rôle (producteur/consommateur)</td><td>Créer et sécuriser votre compte</td></tr>
+        <tr><td>Profil</td><td>Nom complet (optionnel), langue préférée, pays</td><td>Personnaliser votre expérience</td></tr>
+        <tr><td>Ferme (producteurs)</td><td>Nom de la ferme, adresse, coordonnées GPS de la ferme, numéro de TVA, statut de vérification</td><td>Afficher votre ferme sur la carte, vérifier votre statut professionnel</td></tr>
+        <tr><td>Localisation (acheteurs)</td><td>Position approximative au moment de la recherche</td><td>Trouver les fermes à proximité — jamais stockée en base, utilisée uniquement le temps de la recherche</td></tr>
+        <tr><td>Commandes</td><td>Produits achetés, quantités, prix, statut</td><td>Traiter vos commandes</td></tr>
+        <tr><td>Paiement</td><td>Géré entièrement par Stripe — Terrivo ne stocke jamais vos données de carte bancaire</td><td>Traiter les paiements et les versements aux producteurs</td></tr>
+        <tr><td>Vérification d'identité (producteurs individuels)</td><td>Documents transmis à Stripe Identity</td><td>Vérifier l'identité du vendeur — Terrivo ne reçoit jamais le document, seulement le résultat</td></tr>
+        <tr><td>Messages</td><td>Contenu des conversations acheteur-producteur</td><td>Permettre la coordination des commandes</td></tr>
+        <tr><td>Avis</td><td>Notes et commentaires liés à une commande réelle</td><td>Construire la confiance entre utilisateurs</td></tr>
+        <tr><td>Technique</td><td>Jeton de notification push (Android), journaux d'erreurs</td><td>Vous envoyer des notifications, diagnostiquer les problèmes techniques</td></tr>
+      </table>
+    </div>
+    <p>
+      Nous ne collectons pas : numéro de registre national, copie de
+      document d'identité (voir ci-dessus), données bancaires (gérées par
+      Stripe), position GPS précise stockée en continu.
+    </p>
+
+    <h2>3. Base légale de chaque traitement</h2>
+    <p><strong>Exécution du contrat</strong> — création de compte, traitement des commandes, paiements, messagerie.</p>
+    <p><strong>Obligation légale</strong> — lutte contre la fraude, obligations comptables et fiscales.</p>
+    <p><strong>Intérêt légitime</strong> — amélioration du service, prévention des abus, calcul du FreshScore à partir de données déjà collectées.</p>
+    <p><strong>Consentement</strong> — notifications push (vous pouvez les refuser à tout moment).</p>
+
+    <h2>4. Qui reçoit vos données (sous-traitants)</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Prestataire</th><th>Rôle</th><th>Localisation</th></tr>
+        <tr><td>Supabase</td><td>Hébergement base de données et backend</td><td>Union européenne (Francfort, Allemagne)</td></tr>
+        <tr><td>Stripe</td><td>Paiements, versements, vérification d'identité</td><td>UE / États-Unis — certifié PCI-DSS, clauses contractuelles types</td></tr>
+        <tr><td>Google Firebase</td><td>Notifications push (Android)</td><td>UE / États-Unis</td></tr>
+        <tr><td>Mapbox</td><td>Affichage de la carte</td><td>États-Unis — clauses contractuelles types</td></tr>
+      </table>
+    </div>
+    <p>Aucune donnée n'est vendue à des tiers.</p>
+
+    <h2>5. Durée de conservation</h2>
+    <p>Compte actif : durée de l'utilisation du service.</p>
+    <p>Compte supprimé : les données personnelles sont supprimées sous 30 jours, sauf données que nous devons conserver pour obligation légale (factures, données comptables : 7 ans en Belgique).</p>
+    <p>Messages et avis : conservés tant que le compte existe, sauf demande de suppression.</p>
+    <p>Journaux techniques : 90 jours.</p>
+
+    <h2>6. Vos droits</h2>
+    <p>
+      Conformément au RGPD, vous disposez d'un droit d'accès, de
+      rectification, d'effacement, de limitation, d'opposition et de
+      portabilité de vos données. Pour les exercer, contactez
+      <a href="mailto:contact@terrivolocal.com">contact@terrivolocal.com</a>,
+      ou supprimez directement votre compte depuis
+      <a href="/compte/">votre espace compte</a>. Vous pouvez également
+      introduire une réclamation auprès de l'Autorité de protection des
+      données belge
+      (<a href="https://www.autoriteprotectiondonnees.be" target="_blank" rel="noopener">autoriteprotectiondonnees.be</a>).
+    </p>
+
+    <h2>7. Sécurité</h2>
+    <p>
+      Vos données sont protégées par chiffrement en transit (HTTPS/TLS) et
+      au repos. L'accès aux données est cloisonné par utilisateur au niveau
+      de la base de données (Row Level Security). Les opérations sensibles
+      (paiements, remboursements, vérifications) passent par des fonctions
+      serveur dédiées, jamais directement par l'application cliente.
+    </p>
+
+    <h2>8. Cookies et traceurs</h2>
+    <p>
+      L'application mobile n'utilise pas de cookies. Ce site n'utilise que
+      des cookies techniques indispensables à la connexion à votre compte —
+      aucun traceur publicitaire ou analytique tiers.
+    </p>
+
+    <h2>9. Modifications</h2>
+    <p>
+      Cette politique peut être mise à jour. Toute modification
+      substantielle vous sera notifiée dans l'Application.
+    </p>
+  </main>
+
+  <footer>
+    <div>&copy; 2026 Terrivo Group SRL — Avenue Globe 45, boîte 44, 1190 Forest, Belgique</div>
+    <div class="footer-links">
+      <a href="/faq/">FAQ</a>
+      <a href="mailto:contact@terrivolocal.com">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>
