@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conditions générales de vente — Terrivo</title>
+<meta name="description" content="Conditions générales de vente des commandes passées via Terrivo.">
+<link rel="icon" href="/logo.png">
+<style>
+  :root {
+    --green: #3E5C34;
+    --green-dark: #2C4225;
+    --cream: #F5F5E9;
+    --ink: #22281f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: var(--green-dark); }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 28px 24px 0;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--green-dark);
+    text-decoration: none;
+  }
+  .brand img { width: 40px; height: 40px; border-radius: 10px; }
+  nav a {
+    color: var(--green-dark);
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-left: 24px;
+    font-weight: 600;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    color: var(--green-dark);
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+  .updated { opacity: 0.65; font-size: 0.9rem; margin: 0 0 40px; }
+  h2 {
+    font-size: 1.25rem;
+    color: var(--green-dark);
+    margin: 40px 0 12px;
+  }
+  p { margin: 0 0 14px; }
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin: 0 0 16px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    font-size: 0.92rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    vertical-align: top;
+  }
+  th { background: var(--green); color: white; font-weight: 600; }
+  tr:last-child td { border-bottom: none; }
+  .table-wrap { overflow-x: auto; margin: 0 0 16px; border-radius: 16px; }
+  footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: rgba(0,0,0,0.6);
+  }
+  footer a { text-decoration: none; }
+  .footer-links a { margin-right: 18px; }
+</style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">
+      <img src="/logo.png" alt="Terrivo">
+      Terrivo
+    </a>
+    <nav>
+      <a href="/#comment-ca-marche">Comment ça marche</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/compte/">Mon compte</a>
+      <a href="mailto:contact@terrivolocal.com">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+<h1>Conditions générales de vente</h1>
+<p class="updated">Dernière mise à jour : 26 septembre 2026</p>
+<h2>1. Rôle de Terrivo</h2>
+<p>Terrivo (voir CGU pour l'identification complète) est un intermédiaire
+technique qui met en relation Producteurs et Acheteurs. <strong>Le contrat de
+vente est conclu directement entre le Producteur et l'Acheteur</strong> ;
+Terrivo n'est ni vendeur, ni acheteur, ni transporteur des produits.</p>
+<p>Terrivo fournit :
+- l'infrastructure de mise en relation et de commande ;
+- le traitement des paiements via Stripe Connect, avec reversement au
+  Producteur déduction faite de la commission de la plateforme ;
+- un support à la résolution de litiges entre les parties (voir
+  section 7).</p>
+<h2>2. Commande</h2>
+<ul>
+<li>Une commande porte sur les produits d'un seul Producteur à la fois.</li>
+<li>Le prix affiché au moment de la commande fait foi ; il est calculé
+  côté serveur à partir des prix actuels du Producteur, jamais du prix
+  affiché côté client au moment de l'ajout au panier.</li>
+<li>Le stock est vérifié au moment de la commande. En cas de rupture entre
+  la mise au panier et la validation, la quantité disponible prévaut.</li>
+<li>La commande est considérée comme conclue au moment de la confirmation
+  du paiement.</li>
+</ul>
+<h2>3. Prix et commission</h2>
+<ul>
+<li>Les prix affichés sont fixés librement par chaque Producteur et
+  incluent, le cas échéant, la TVA applicable sur le produit vendu, dont
+  le Producteur est seul responsable du calcul et du reversement.</li>
+<li>Terrivo perçoit une commission de <strong>10% hors TVA</strong> du prix de vente,
+  à charge du Producteur (le prix payé par l'Acheteur n'est pas majoré).
+  Ce taux est configurable par pays d'établissement du Producteur.</li>
+<li><strong>Cette commission est majorée de la TVA applicable</strong> :</li>
+<li>Producteur établi en Belgique : TVA belge à 21% ajoutée à la
+    commission (soit 12,1% au total prélevés sur la vente), que le
+    Producteur soit lui-même assujetti à la TVA ou non. Un Producteur
+    assujetti peut récupérer cette TVA via sa propre déclaration ; un
+    Producteur non-assujetti (particulier, régime de la franchise) la
+    supporte comme un coût.</li>
+<li>Producteur établi dans un autre État membre de l'Union européenne,
+    disposant d'un numéro de TVA intracommunautaire valide et vérifié :
+    <strong>autoliquidation</strong> — Terrivo ne facture aucune TVA (0%), le
+    Producteur déclare et acquitte lui-même la TVA due dans son pays
+    (article 44 de la directive 2006/112/CE).</li>
+<li>Tout autre cas (Producteur hors Union européenne, ou établi dans un
+    autre État membre sans numéro de TVA intracommunautaire vérifié)
+    n'est pas encore pris en charge par la plateforme à ce stade.</li>
+<li>Terrivo émet une facture de commission au Producteur pour chaque
+  vente, détaillant le montant hors TVA, la TVA applicable (ou la
+  mention d'autoliquidation) et le total prélevé.</li>
+<li>Le solde net (prix payé par l'Acheteur moins commission TTC) est
+  reversé au Producteur via Stripe Connect.</li>
+<li>En cas de remboursement, la commission perçue par Terrivo est
+  intégralement reversée (voir section 7) et une note de crédit annule
+  la facture de commission correspondante.</li>
+</ul>
+<h2>4. Paiement</h2>
+<ul>
+<li>Le paiement est exigible au moment de la commande et traité par Stripe,
+  prestataire de services de paiement agréé. <strong>Terrivo ne stocke jamais
+  vos données de carte bancaire.</strong></li>
+<li>Une commande dont le paiement n'est pas finalisé dans un délai de
+  30 minutes est automatiquement annulée et le stock est restitué.</li>
+</ul>
+<h2>5. Livraison et retrait</h2>
+<p>Les modalités de livraison ou de retrait (lieu, créneau, éventuels frais)
+sont définies librement par chaque Producteur et communiquées à
+l'Acheteur via la messagerie intégrée après la commande. <strong>Terrivo n'est
+pas transporteur</strong> et n'intervient pas dans l'exécution matérielle de la
+livraison.</p>
+<h2>6. Droit de rétractation</h2>
+<p>Conformément à l'article VI.53, 4° et 5° du Code de droit économique
+belge (transposant l'article 16 de la directive 2011/83/UE), <strong>le droit
+de rétractation ne s'applique pas</strong> aux biens susceptibles de se
+détériorer ou de se périmer rapidement (denrées alimentaires fraîches),
+ni aux biens descellés après livraison qui ne peuvent être renvoyés pour
+des raisons d'hygiène ou de protection de la santé. La majorité des
+produits vendus sur Terrivo relève de cette exception.</p>
+<h2>7. Réclamations et litiges</h2>
+<ul>
+<li>En cas de problème sur une commande (produit non conforme, absent,
+  etc.), l'Acheteur peut signaler le problème directement depuis
+  l'Application dans un délai raisonnable après la commande.</li>
+<li>Le Producteur est notifié et peut résoudre le signalement sans
+  remboursement (par exemple après clarification) ou procéder à un
+  remboursement total via la plateforme.</li>
+<li>Le remboursement, lorsqu'il a lieu, est traité intégralement via
+  Stripe et restitue à l'Acheteur le montant payé ; la commission perçue
+  par Terrivo sur la transaction annulée est également reversée.</li>
+<li>Si aucun accord n'est trouvé entre les parties, l'Acheteur consommateur
+  peut recourir au Service de Médiation pour le Consommateur
+  (mediationconsommateur.be).</li>
+</ul>
+<h2>8. Avis</h2>
+<p>Un Acheteur ne peut laisser un avis qu'après une commande réellement
+passée et confirmée auprès du Producteur concerné. Les avis sont modérés
+a posteriori en cas de signalement ; les avis manifestement frauduleux,
+diffamatoires ou sans rapport avec la transaction peuvent être retirés.</p>
+<h2>9. Responsabilité relative aux produits</h2>
+<p>Le Producteur est seul responsable :
+- de la sécurité et de la salubrité de ses produits ;
+- du respect des réglementations applicables à la vente de denrées
+  alimentaires (enregistrement AFSCA le cas échéant, étiquetage,
+  allergènes) ;
+- de l'exactitude de toute mention (« bio », origine, etc.).</p>
+<p>Terrivo n'effectue aucun contrôle physique des produits vendus et ne
+saurait être tenue responsable d'un dommage résultant de leur
+consommation, sans préjudice de tout recours de l'Acheteur contre le
+Producteur.</p>
+<h2>10. Droit applicable</h2>
+<p>Voir CGU, section 11.</p>
+</main>
+
+  <footer>
+    <div>&copy; 2026 Terrivo Group SRL — Avenue Globe 45, boîte 44, 1190 Forest, Belgique</div>
+    <div class="footer-links">
+      <a href="/cgu/">CGU</a>
+      <a href="/cgv/">CGV</a>
+      <a href="/confidentialite/">Confidentialité</a>
+      <a href="/mentions-legales/">Mentions légales</a>
+      <a href="/faq/">FAQ</a>
+      <a href="mailto:contact@terrivolocal.com">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>
