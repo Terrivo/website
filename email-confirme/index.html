@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E-mail confirmé — Terrivo</title>
+<meta name="description" content="Ton adresse e-mail est confirmée. Retourne dans l'application Terrivo.">
+<link rel="icon" href="/logo.png">
+<style>
+  :root {
+    --green: #3E5C34;
+    --green-dark: #2C4225;
+    --cream: #F5F5E9;
+    --ink: #22281f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: var(--green-dark); }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 28px 24px 0;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--green-dark);
+    text-decoration: none;
+  }
+  .brand img { width: 40px; height: 40px; border-radius: 10px; }
+  nav a {
+    color: var(--green-dark);
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-left: 24px;
+    font-weight: 600;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    color: var(--green-dark);
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+  .updated { opacity: 0.65; font-size: 0.9rem; margin: 0 0 40px; }
+  h2 {
+    font-size: 1.25rem;
+    color: var(--green-dark);
+    margin: 40px 0 12px;
+  }
+  p { margin: 0 0 14px; }
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin: 0 0 16px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    font-size: 0.92rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    vertical-align: top;
+  }
+  th { background: var(--green); color: white; font-weight: 600; }
+  tr:last-child td { border-bottom: none; }
+  .table-wrap { overflow-x: auto; margin: 0 0 16px; border-radius: 16px; }
+  footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: rgba(0,0,0,0.6);
+  }
+  footer a { text-decoration: none; }
+  .footer-links a { margin-right: 18px; }
+  .confirm { text-align: center; background: white; border-radius: 16px; padding: 48px 28px; margin-top: 24px; }
+  .check { width: 72px; height: 72px; border-radius: 50%; background: var(--green); color: white; font-size: 2.2rem; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+  .confirm.error .check { background: #b3392c; }
+  .confirm h1 { margin-bottom: 12px; }
+  .lang { opacity: 0.7; font-size: 0.92rem; margin-top: 28px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">
+      <img src="/logo.png" alt="Terrivo">
+      Terrivo
+    </a>
+    <nav>
+      <a href="/#comment-ca-marche">Comment ça marche</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/compte/">Mon compte</a>
+      <a href="mailto:contact@terrivolocal.com">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="confirm" id="ok">
+      <div class="check">&#10003;</div>
+      <h1>E-mail bien confirmé !</h1>
+      <p>Ton compte Terrivo est activé. Tu peux maintenant retourner dans l'application et te connecter.</p>
+      <p class="lang">Your email is confirmed — return to the Terrivo app and sign in.<br>Je e-mail is bevestigd — ga terug naar de Terrivo-app en meld je aan.</p>
+    </div>
+    <div class="confirm error" id="ko" hidden>
+      <div class="check">!</div>
+      <h1>Lien expiré ou déjà utilisé</h1>
+      <p>Si tu as déjà confirmé ton e-mail, ouvre simplement l'application et connecte-toi. Sinon, ouvre l'application et demande un nouvel e-mail de confirmation, ou écris-nous à <a href="mailto:contact@terrivolocal.com">contact@terrivolocal.com</a>.</p>
+    </div>
+  </main>
+  <script>
+    if (/error/i.test(location.hash + location.search)) {
+      document.getElementById("ok").hidden = true;
+      document.getElementById("ko").hidden = false;
+    }
+  </script>
+
+  <footer>
+    <div>&copy; 2026 Terrivo Group SRL — Avenue Globe 45, boîte 44, 1190 Forest, Belgique</div>
+    <div class="footer-links">
+      <a href="/confidentialite/">Confidentialité</a>
+      <a href="/faq/">FAQ</a>
+      <a href="mailto:contact@terrivolocal.com">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>
