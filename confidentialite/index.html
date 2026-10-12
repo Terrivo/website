@@ -121,7 +121,7 @@
 
   <main>
     <h1>Politique de confidentialité</h1>
-    <p class="updated">Dernière mise à jour : 25 septembre 2026</p>
+    <p class="updated">Dernière mise à jour : 12 octobre 2026</p>
 
     <h2>1. Qui sommes-nous</h2>
     <p>
@@ -142,20 +142,23 @@
         <tr><th>Catégorie</th><th>Exemples</th><th>Finalité</th></tr>
         <tr><td>Compte</td><td>Email, mot de passe (haché), rôle (producteur/consommateur)</td><td>Créer et sécuriser votre compte</td></tr>
         <tr><td>Profil</td><td>Nom complet (optionnel), langue préférée, pays</td><td>Personnaliser votre expérience</td></tr>
-        <tr><td>Ferme (producteurs)</td><td>Nom de la ferme, adresse, coordonnées GPS de la ferme, numéro de TVA, statut de vérification</td><td>Afficher votre ferme sur la carte, vérifier votre statut professionnel</td></tr>
-        <tr><td>Localisation (acheteurs)</td><td>Position approximative au moment de la recherche</td><td>Trouver les fermes à proximité — jamais stockée en base, utilisée uniquement le temps de la recherche</td></tr>
+        <tr><td>Ferme (producteurs)</td><td>Nom de la ferme, adresse, coordonnées GPS de la ferme, horaires, description, numéro de TVA, statut de vérification</td><td>Afficher votre ferme sur la carte, vérifier votre statut professionnel. <strong>Producteur professionnel :</strong> l'adresse de l'exploitation est publique. <strong>Producteur particulier :</strong> la carte n'affiche qu'une position floutée (environ 500 m) et aucune adresse ; l'adresse exacte n'est communiquée qu'aux acheteurs ayant payé une commande chez vous</td></tr>
+        <tr><td>Localisation (acheteurs)</td><td>Position de l'appareil au moment de la recherche (avec votre autorisation)</td><td>Trouver les fermes à proximité — la position est envoyée à nos serveurs le temps de calculer les distances, puis oubliée : elle n'est jamais enregistrée</td></tr>
+        <tr><td>Recherches</td><td>Mot recherché, filtres, nombre de résultats</td><td>Mesurer si l'offre répond à la demande — sans identifiant ni position, conservé 180 jours</td></tr>
+        <tr><td>Photos</td><td>Photos de ferme, de produits et d'avis que vous ajoutez</td><td>Illustrer les fermes, produits et avis — visibles par tous les utilisateurs</td></tr>
         <tr><td>Commandes</td><td>Produits achetés, quantités, prix, statut</td><td>Traiter vos commandes</td></tr>
         <tr><td>Paiement</td><td>Géré entièrement par Stripe — Terrivo ne stocke jamais vos données de carte bancaire</td><td>Traiter les paiements et les versements aux producteurs</td></tr>
         <tr><td>Vérification d'identité (producteurs individuels)</td><td>Documents transmis à Stripe Identity</td><td>Vérifier l'identité du vendeur — Terrivo ne reçoit jamais le document, seulement le résultat</td></tr>
-        <tr><td>Messages</td><td>Contenu des conversations acheteur-producteur</td><td>Permettre la coordination des commandes</td></tr>
-        <tr><td>Avis</td><td>Notes et commentaires liés à une commande réelle</td><td>Construire la confiance entre utilisateurs</td></tr>
-        <tr><td>Technique</td><td>Jeton de notification push (Android), journaux d'erreurs</td><td>Vous envoyer des notifications, diagnostiquer les problèmes techniques</td></tr>
+        <tr><td>Messages</td><td>Contenu des conversations acheteur-producteur. L'autre partie voit un pseudonyme (« Acheteur 3F2A », nom de la ferme), jamais votre e-mail</td><td>Permettre la coordination des commandes</td></tr>
+        <tr><td>Avis</td><td>Notes, commentaire et photos liés à une commande réellement retirée. L'identité de l'auteur n'est pas affichée aux autres utilisateurs</td><td>Construire la confiance entre utilisateurs</td></tr>
+        <tr><td>Signalements et blocages</td><td>Contenu signalé, motif, utilisateurs bloqués</td><td>Modérer la plateforme (traitement visé sous 24 h)</td></tr>
+        <tr><td>Technique</td><td>Jeton de notification push (iOS et Android), rapports de plantage et de performance</td><td>Vous envoyer les notifications que vous avez acceptées, diagnostiquer les problèmes techniques</td></tr>
       </table>
     </div>
     <p>
       Nous ne collectons pas : numéro de registre national, copie de
       document d'identité (voir ci-dessus), données bancaires (gérées par
-      Stripe), position GPS précise stockée en continu.
+      Stripe), position GPS de votre appareil stockée.
     </p>
 
     <h2>3. Base légale de chaque traitement</h2>
@@ -170,17 +173,33 @@
         <tr><th>Prestataire</th><th>Rôle</th><th>Localisation</th></tr>
         <tr><td>Supabase</td><td>Hébergement base de données et backend</td><td>Union européenne (Francfort, Allemagne)</td></tr>
         <tr><td>Stripe</td><td>Paiements, versements, vérification d'identité</td><td>UE / États-Unis — certifié PCI-DSS, clauses contractuelles types</td></tr>
-        <tr><td>Google Firebase</td><td>Notifications push (Android)</td><td>UE / États-Unis</td></tr>
-        <tr><td>Mapbox</td><td>Affichage de la carte</td><td>États-Unis — clauses contractuelles types</td></tr>
+        <tr><td>Google Firebase</td><td>Notifications push (Android et iPhone)</td><td>UE / États-Unis</td></tr>
+        <tr><td>Apple (notifications push)</td><td>Acheminement des notifications sur iPhone</td><td>UE / États-Unis</td></tr>
+        <tr><td>Mapbox</td><td>Fonds de carte et conversion de l'adresse d'une ferme en position sur la carte</td><td>États-Unis — clauses contractuelles types</td></tr>
+        <tr><td>Sentry</td><td>Suivi des erreurs et des plantages (données techniques, sans contenu personnel intentionnel)</td><td>Allemagne (Union européenne)</td></tr>
+        <tr><td>Commission européenne (VIES)</td><td>Vérification des numéros de TVA professionnels</td><td>Union européenne</td></tr>
+        <tr><td>Prestataire d'envoi d'e-mails</td><td>E-mails de confirmation de compte et de réinitialisation du mot de passe</td><td>Union européenne ou clauses contractuelles types</td></tr>
       </table>
     </div>
     <p>Aucune donnée n'est vendue à des tiers.</p>
 
     <h2>5. Durée de conservation</h2>
     <p>Compte actif : durée de l'utilisation du service.</p>
-    <p>Compte supprimé : les données personnelles sont supprimées sous 30 jours, sauf données que nous devons conserver pour obligation légale (factures, données comptables : 7 ans en Belgique).</p>
-    <p>Messages et avis : conservés tant que le compte existe, sauf demande de suppression.</p>
-    <p>Journaux techniques : 90 jours.</p>
+    <p>
+      <strong>Compte supprimé</strong> (depuis l'application ou depuis
+      <a href="/compte/">votre espace compte</a>) : la suppression est
+      immédiate. L'e-mail, le profil, les messages, les jetons de
+      notification, les photos et les textes d'avis sont effacés ; le compte
+      Stripe du producteur est clôturé et ses données d'identité chez Stripe
+      sont expurgées. <strong>Sont conservés, sans lien avec votre
+      identité :</strong> les commandes payées et leurs montants (commission,
+      TVA), pour nos obligations comptables et fiscales (7 ans en Belgique),
+      les notes chiffrées d'un avis (elles alimentent le score de la ferme)
+      et la ferme d'un producteur, vidée de son contenu. Un compte ne peut pas
+      être supprimé tant qu'une commande payée ou un litige est en cours.
+    </p>
+    <p>Messages et avis : conservés tant que le compte existe.</p>
+    <p>Recherches : 180 jours. Rapports d'erreurs (plantages) : 90 jours au maximum.</p>
 
     <h2>6. Vos droits</h2>
     <p>
