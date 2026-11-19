@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Terrivo — De marktplaats voor lokale producenten</title>
-<meta name="description" content="Terrivo brengt lokale producenten en consumenten rechtstreeks met elkaar in contact, zonder tussenpersoon. Lancering in België.">
+<meta name="description" content="Terrivo brengt lokale producenten en consumenten rechtstreeks met elkaar in contact: de producent bepaalt zijn prijs en verkoopt rechtstreeks. Beschikbaar in België.">
 <link rel="icon" href="/logo.png">
 <style>
   :root {
@@ -85,6 +85,24 @@
     font-size: 0.95rem;
     letter-spacing: 0.02em;
   }
+  .stores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .store-btn {
+    display: inline-block;
+    background: #1c1c1c;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+  .store-btn:hover, .store-btn:focus-visible { background: var(--green-dark); }
   .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -167,11 +185,14 @@
     <p class="tagline">Fruit, groenten, eieren, kaas... rechtstreeks gekocht bij producenten in jouw buurt.</p>
     <p class="pitch">
       Terrivo brengt lokale producenten rechtstreeks in contact met
-      consumenten, zonder tussenpersoon. Je koopt aan een eerlijke prijs, de
-      producent verkoopt rechtstreeks — zonder commissie van een
-      grootwarenhuis, zonder groothandelaar ertussen.
+      consumenten. De producent bepaalt zijn prijs en verkoopt
+      rechtstreeks — zonder groothandelaar of grootdistributie ertussen.
     </p>
-    <span class="badge">Lancering in België — Binnenkort beschikbaar</span>
+    <span class="badge">Lancering in België — Nu beschikbaar</span>
+    <div class="stores">
+      <a class="store-btn" href="https://apps.apple.com/be/app/terrivo/id6816142890" target="_blank" rel="noopener">Download in de App Store</a>
+      <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.terrivo.terrivo" target="_blank" rel="noopener">Beschikbaar op Google Play</a>
+    </div>
   </section>
 
   <section id="waarom">
@@ -190,7 +211,7 @@
       <div>
         <h3>Onze aanpak</h3>
         <p>
-          Terrivo schakelt de tussenpersonen uit: de producent bepaalt zijn
+          Met Terrivo bepaalt de producent zijn
           eigen prijs, publiceert wat hij beschikbaar heeft, en verkoopt
           rechtstreeks aan consumenten in zijn regio. De koper haalt zijn
           bestelling rechtstreeks op bij de producent — maximale versheid,
@@ -229,8 +250,8 @@
         <p>
           Maak in enkele minuten je eigen pagina aan, publiceer je
           beschikbare producten en verkoop rechtstreeks aan consumenten in
-          jouw regio — zonder commissie van een grootwarenhuis, zonder
-          groothandelaar tussen jou en je klanten.
+          jouw regio — zonder groothandelaar of grootdistributie tussen
+          jou en je klanten.
         </p>
       </div>
       <div>

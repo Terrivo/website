@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Terrivo — Le marché des producteurs locaux</title>
-<meta name="description" content="Terrivo met en relation directe les producteurs locaux et les consommateurs, sans intermédiaire. Lancement en Belgique.">
+<meta name="description" content="Terrivo met en relation directe les producteurs locaux et les consommateurs : le producteur fixe son prix et vend en direct. Disponible en Belgique.">
 <link rel="icon" href="/logo.png">
 <style>
   :root {
@@ -85,6 +85,24 @@
     font-size: 0.95rem;
     letter-spacing: 0.02em;
   }
+  .stores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .store-btn {
+    display: inline-block;
+    background: #1c1c1c;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+  .store-btn:hover, .store-btn:focus-visible { background: var(--green-dark); }
   .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -166,12 +184,15 @@
     <h1>Le marché des producteurs locaux</h1>
     <p class="tagline">Fruits, légumes, œufs, fromages... achetés directement aux producteurs près de chez vous.</p>
     <p class="pitch">
-      Terrivo met en relation directe les producteurs locaux et les consommateurs,
-      sans intermédiaire. Vous achetez au prix juste, le producteur vend
-      directement — sans commission de grande surface, sans grossiste entre vous
-      et lui.
+      Terrivo met en relation directe les producteurs locaux et les consommateurs.
+      Le producteur fixe son prix et vend directement — sans grossiste ni grande
+      distribution entre vous et lui.
     </p>
-    <span class="badge">Lancement en Belgique — Bientôt disponible</span>
+    <span class="badge">Lancement en Belgique — Disponible maintenant</span>
+    <div class="stores">
+      <a class="store-btn" href="https://apps.apple.com/be/app/terrivo/id6816142890" target="_blank" rel="noopener">Télécharger sur l'App Store</a>
+      <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.terrivo.terrivo" target="_blank" rel="noopener">Disponible sur Google Play</a>
+    </div>
   </section>
 
   <section id="pourquoi">
@@ -189,7 +210,7 @@
       <div>
         <h3>Notre approche</h3>
         <p>
-          Terrivo supprime les intermédiaires : le producteur fixe son prix,
+          Avec Terrivo, le producteur fixe son prix,
           publie ce qu'il a de disponible, et vend directement à des
           consommateurs de sa région. L'acheteur récupère sa commande
           directement auprès du producteur — fraîcheur maximale, traçabilité
@@ -228,8 +249,8 @@
         <p>
           Créez votre vitrine en quelques minutes, publiez vos produits
           disponibles et vendez directement à des consommateurs de votre
-          région — sans commission de grande surface, sans grossiste entre
-          vous et vos clients.
+          région — sans grossiste ni grande distribution entre vous et
+          vos clients.
         </p>
       </div>
       <div>
